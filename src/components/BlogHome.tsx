@@ -1,48 +1,194 @@
 
 import React from 'react';
-import { Waves } from 'lucide-react';
-import BlogCard from './BlogCard';
-
-// Sample blog data
-const blogPosts = [
-  {
-    id: 1,
-    title: 'Reward Hacking in Reinforcement Learning',
-    excerpt: 'Reward hacking occurs when a reinforcement learning (RL) agent exploits flaws or ambiguities in the reward function to achieve high rewards, without genuinely learning or completing the intended task...',
-    date: 'November 28, 2024',
-    readingTime: '37 min',
-    author: 'Lilian Weng',
-  },
-  {
-    id: 2,
-    title: 'Extrinsic Hallucinations in LLMs',
-    excerpt: 'Hallucination in large language models usually refers to the model generating unfaithful, fabricated, inconsistent, or nonsensical content. As a term, hallucination has been somewhat generalized to case...',
-    date: 'July 7, 2024',
-    readingTime: '30 min',
-    author: 'Lilian Weng',
-  },
-  {
-    id: 3,
-    title: 'Diffusion Models for Video Generation',
-    excerpt: 'Diffusion models have demonstrated strong results on image synthesis in past years. Now the research community has started working on a harder task - using it for video generation. The task itself is a...',
-    date: 'March 15, 2024',
-    readingTime: '25 min',
-    author: 'Lilian Weng',
-  },
-];
+import { Waves, Briefcase, GraduationCap, FileText } from 'lucide-react';
 
 const BlogHome = () => {
+  // Work experience data
+  const workExperience = [
+    {
+      id: 1,
+      title: 'Head of AI',
+      company: 'RightHub',
+      location: 'Stockholm, Sweden',
+      description: 'Helping build the future of Intellectual Property with AI.',
+    },
+    {
+      id: 2,
+      title: 'AI Engineer',
+      company: 'Silo AI',
+      location: 'Helsinki, Finland',
+      description: 'Silo AI is Europe\'s largest private AI lab. I led projects in Generative AI.',
+    },
+    {
+      id: 3,
+      title: 'Founding AI Engineer & Research Lead',
+      company: 'Flowrite',
+      location: 'Helsinki, Finland',
+      description: 'Joined as Engineer/Employee #1. Worked extensively with all things related to large language models like GPT-3, from leveraging their generation capabilities to build conversational AI agents to creating custom metrics to fight against their stochasticity. Also thoroughly explored the new paradigm of prompt engineering.',
+    },
+    {
+      id: 4,
+      title: 'AI Researcher',
+      company: 'Aalto University',
+      location: 'Espoo, Finland',
+      description: 'Wrote the python implementation for the the library of the model agnostic explainable AI (XAI) algorithm called Contextual Importance and Utility (CIU) under the supervision of Dr. Kary Främling.',
+    },
+    {
+      id: 5,
+      title: 'Machine Learning Researcher',
+      company: 'Aalto University',
+      location: 'Espoo, Finland',
+      description: 'Explainable AI (XAI) for medical medical images derived from the wireless capsule endoscopy (WCE) procedure. The objective of the project was to build a decision making support',
+    },
+    {
+      id: 6,
+      title: 'Co-founder',
+      company: 'FOODL',
+      location: 'Espoo, Finland',
+      description: 'Build the largest food-sharing platform at Aalto University in Finland. The platform was open-sourced and is now run by community voluteers. I\'ve moved to a more passive role.',
+    },
+    {
+      id: 7,
+      title: 'Data Scientist – Thesis Worker',
+      company: 'Futurice',
+      location: 'Helsinki, Finland',
+      description: 'Time series forecasting and explainable AI (XAI) for mutivariate time series forecating model to extract actionable insigts for sales strategy.',
+    },
+    {
+      id: 8,
+      title: 'ML Engineer - Internship',
+      company: 'Aalto University',
+      location: 'Helsinki, Finland',
+      description: 'Built an IT support ticket classifer POC for IT services department to help expedite the customer support service process by roughly 50%.',
+    },
+    {
+      id: 9,
+      title: 'Co-founder and ML Developer',
+      company: 'NeuroGuard',
+      location: 'Berkeley, California',
+      description: 'An attempt at personalized diagnostics for brain tumors patients.',
+    },
+    {
+      id: 10,
+      title: 'Co-founder and CEO',
+      company: 'QB Middle East',
+      location: '',
+      description: 'Built a queue-busting platform to help bring down waiting time for users from hours to few mins at most places.',
+    },
+  ];
+
+  // Education data
+  const education = [
+    {
+      id: 1,
+      year: '2018-2020',
+      institution: 'KTH Royal Institute of Technology',
+      location: 'Sweden'
+    },
+    {
+      id: 2,
+      year: '2018-2020',
+      institution: 'Aalto University',
+      location: 'Finland'
+    },
+    {
+      id: 3,
+      year: '2013-2017',
+      institution: 'Birla Institute of Technology and Science (BITS), Pilani',
+      location: 'India'
+    },
+  ];
+
+  // Publications data
+  const publications = [
+    {
+      id: 1,
+      title: 'Explainable Artificial Intelligence for Human Decision Support System in the Medical Domain'
+    },
+    {
+      id: 2,
+      title: 'Towards a Rigorous Evaluation of Explainability for Multivariate Time Series'
+    },
+    {
+      id: 3,
+      title: 'Any sufficiently advanced technology is indistinguishable from Magic'
+    },
+  ];
+
   return (
     <div className="pt-24 px-6 md:px-12 lg:px-24 max-w-6xl mx-auto">
       <section className="py-12">
         <div className="mb-16">
           <h1 className="text-4xl md:text-5xl font-bold flex items-center gap-3 mb-6">
-            <Waves className="text-yellow-400" size={32} /> Welcome to Lil'Log
+            <Waves className="text-yellow-400" size={32} /> Rohit Saluja
           </h1>
-          <p className="text-lg text-muted-foreground">
-            Hi, this is Lilian. I'm documenting my learning notes in this blog since 2017. Based on the number of 
-            grammar mistakes in my posts, you can tell how much ChatGPT is involved 😄.
-          </p>
+          
+          {/* About section */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">About</h2>
+            <p className="text-lg text-muted-foreground">
+              I've always seen technology as an instrument of change. With recent advancements in AI and the newfound 
+              ability to create and scale intelligence, I firmly believe we are witnessing the biggest breakthrough ever, 
+              not just in technology. I am determined to leverage AI for large-scale impacts and play a small role in 
+              creating a society of abundance in the upcoming decades.
+            </p>
+          </div>
+          
+          {/* Work Experience section */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <Briefcase size={24} className="text-yellow-400" /> Work Experience
+            </h2>
+            <div className="space-y-8">
+              {workExperience.map(job => (
+                <div key={job.id} className="border-l-2 border-yellow-400 pl-4 py-1 animate-on-scroll opacity-0 animate-fade-up">
+                  <h3 className="text-xl font-bold">{job.title}</h3>
+                  <div className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground mb-2">
+                    <span className="font-medium">{job.company}</span>
+                    {job.location && (
+                      <>
+                        <span className="w-1 h-1 rounded-full bg-muted-foreground inline-block"></span>
+                        <span>{job.location}</span>
+                      </>
+                    )}
+                  </div>
+                  <p className="text-muted-foreground">{job.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Education section */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <GraduationCap size={24} className="text-yellow-400" /> Education
+            </h2>
+            <div className="space-y-4">
+              {education.map(edu => (
+                <div key={edu.id} className="animate-on-scroll opacity-0 animate-fade-up">
+                  <div className="flex items-center gap-3 mb-1">
+                    <span className="text-sm font-mono bg-secondary/50 px-2 py-1 rounded">{edu.year}</span>
+                    <h3 className="text-lg font-bold">{edu.institution}</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground ml-14">{edu.location}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Publications section */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <FileText size={24} className="text-yellow-400" /> Publications
+            </h2>
+            <ul className="list-disc list-inside space-y-2">
+              {publications.map(pub => (
+                <li key={pub.id} className="text-muted-foreground animate-on-scroll opacity-0 animate-fade-up">
+                  {pub.title}
+                </li>
+              ))}
+            </ul>
+          </div>
           
           <div className="flex gap-6 mt-8">
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
@@ -69,20 +215,6 @@ const BlogHome = () => {
               </svg>
             </a>
           </div>
-        </div>
-
-        <div id="posts" className="space-y-8">
-          {blogPosts.map(post => (
-            <BlogCard 
-              key={post.id}
-              title={post.title}
-              excerpt={post.excerpt}
-              date={post.date}
-              readingTime={post.readingTime}
-              author={post.author}
-              className="animate-on-scroll opacity-0 animate-fade-up"
-            />
-          ))}
         </div>
       </section>
     </div>

@@ -30,11 +30,10 @@ const Navbar = () => {
   }, []);
   
   const navLinks: NavLink[] = [
-    { name: 'Posts', href: '#posts' },
-    { name: 'Archive', href: '#archive' },
-    { name: 'Search', href: '#search' },
-    { name: 'Tags', href: '#tags' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Education', href: '#education' },
+    { name: 'Publications', href: '#publications' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -44,7 +43,7 @@ const Navbar = () => {
     )}>
       <div className="px-6 md:px-12 lg:px-24 flex items-center justify-between">
         <a href="#home" className="text-xl font-semibold tracking-tight flex items-center gap-2">
-          Lil'Log
+          Rohit Saluja
           <Moon size={18} className="hidden dark:inline-block" />
           <Sun size={18} className="inline-block dark:hidden" />
         </a>
