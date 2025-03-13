@@ -109,11 +109,7 @@ const BlogHome = () => {
       id: 2,
       title: 'Towards a Rigorous Evaluation of Explainability for Multivariate Time Series',
       link: 'https://arxiv.org/abs/2104.04075'
-    },
-    {
-      id: 3,
-      title: 'Any sufficiently advanced technology is indistinguishable from Magic'
-    },
+    }
   ];
 
   return (
@@ -197,7 +193,7 @@ const BlogHome = () => {
             </ul>
           </div>
           
-          {/* Quote section */}
+          {/* Social links section */}
           <div className="flex gap-6 mt-8">
             <a href="mailto:contact@example.com" aria-label="Email">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -226,15 +222,6 @@ const BlogHome = () => {
           </div>
         </div>
       </section>
-      
-      {/* Quote section */}
-      <div className="w-full py-12 bg-[#1a1a1a] -mx-6 mt-12">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <p className="text-xl md:text-2xl font-medium text-foreground/90">
-            "Any sufficiently advanced technology is indistinguishable from Magic"
-          </p>
-        </div>
-      </div>
     </div>
   );
 };
