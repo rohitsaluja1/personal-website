@@ -28,7 +28,6 @@ const Navbar = () => {
     { name: 'Search', href: '#search' },
     { name: 'Tags', href: '#tags' },
     { name: 'FAQ', href: '#faq' },
-    { name: 'emojisearch.app', href: 'https://emojisearch.app', external: true },
   ];
 
   return (

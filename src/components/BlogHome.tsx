@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Wave } from 'lucide-react';
+import { Waves } from 'lucide-react';
 import BlogCard from './BlogCard';
 
 // Sample blog data
@@ -37,7 +37,7 @@ const BlogHome = () => {
       <section className="py-12">
         <div className="mb-16">
           <h1 className="text-4xl md:text-5xl font-bold flex items-center gap-3 mb-6">
-            <Wave className="text-yellow-400" size={32} /> Welcome to Lil'Log
+            <Waves className="text-yellow-400" size={32} /> Welcome to Lil'Log
           </h1>
           <p className="text-lg text-muted-foreground">
             Hi, this is Lilian. I'm documenting my learning notes in this blog since 2017. Based on the number of 
