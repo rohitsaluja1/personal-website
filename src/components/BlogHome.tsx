@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Waves, Briefcase, GraduationCap, FileText } from 'lucide-react';
 
@@ -103,7 +102,8 @@ const BlogHome = () => {
   const publications = [
     {
       id: 1,
-      title: 'Explainable Artificial Intelligence for Human Decision Support System in the Medical Domain'
+      title: 'Explainable Artificial Intelligence for Human Decision Support System in the Medical Domain',
+      link: 'https://www.mdpi.com/2504-4990/3/3/37'
     },
     {
       id: 2,
@@ -184,7 +184,13 @@ const BlogHome = () => {
             <ul className="list-disc list-inside space-y-2">
               {publications.map(pub => (
                 <li key={pub.id} className="text-muted-foreground animate-on-scroll opacity-0 animate-fade-up">
-                  {pub.title}
+                  {pub.link ? (
+                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-yellow-400 transition-colors">
+                      {pub.title}
+                    </a>
+                  ) : (
+                    pub.title
+                  )}
                 </li>
               ))}
             </ul>
