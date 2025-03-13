@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
   
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -23,26 +23,36 @@ const Navbar = () => {
   }, []);
   
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Posts', href: '#posts' },
+    { name: 'Archive', href: '#archive' },
+    { name: 'Search', href: '#search' },
+    { name: 'Tags', href: '#tags' },
+    { name: 'FAQ', href: '#faq' },
+    { name: 'emojisearch.app', href: 'https://emojisearch.app', external: true },
   ];
 
   return (
     <header className={cn(
       'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-      isScrolled ? 'py-4 backdrop-blur-lg bg-background/80 shadow-sm' : 'py-6 bg-transparent'
+      isScrolled ? 'py-3 backdrop-blur-lg bg-background/90 shadow-sm border-b border-border/50' : 'py-4 bg-transparent'
     )}>
       <div className="px-6 md:px-12 lg:px-24 flex items-center justify-between">
-        <a href="#home" className="text-xl font-semibold tracking-tight">
-          Portfolio
+        <a href="#home" className="text-xl font-semibold tracking-tight flex items-center gap-2">
+          Lil'Log
+          <Moon size={18} className="hidden dark:inline-block" />
+          <Sun size={18} className="inline-block dark:hidden" />
         </a>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex space-x-6">
           {navLinks.map(link => (
-            <a key={link.name} href={link.href} className="nav-item">
+            <a 
+              key={link.name} 
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
+              className="nav-item text-sm font-medium"
+            >
               {link.name}
             </a>
           ))}
@@ -65,7 +75,9 @@ const Navbar = () => {
             {navLinks.map(link => (
               <a 
                 key={link.name} 
-                href={link.href} 
+                href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 className="text-lg py-2"
                 onClick={() => setIsMenuOpen(false)}
               >

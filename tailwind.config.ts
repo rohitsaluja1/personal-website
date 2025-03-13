@@ -53,6 +53,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Blog specific colors
+				blog: {
+					dark: '#111111',
+					card: '#1e1e1e',
+					hover: '#2a2a2a',
+					text: '#f5f5f5',
+					muted: '#888888',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

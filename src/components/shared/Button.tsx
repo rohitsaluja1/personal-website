@@ -19,9 +19,9 @@ const Button = ({
   const baseClasses = 'btn';
   
   const variantClasses = {
-    primary: 'btn-primary',
-    secondary: 'btn-secondary',
-    outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
+    primary: 'bg-primary text-primary-foreground hover:bg-primary/80',
+    secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+    outline: 'border border-input bg-transparent hover:bg-accent hover:text-accent-foreground',
     ghost: 'hover:bg-accent hover:text-accent-foreground',
   };
   
