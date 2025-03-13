@@ -3,13 +3,11 @@ import React from 'react';
 import { Mail, Github, Twitter, CircleUser } from 'lucide-react';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  
   const socialLinks = [
-    { icon: Mail, href: 'mailto:contact@example.com', label: 'Email' },
+    { icon: Mail, href: 'mailto:salujarohit@outlook.com', label: 'Email' },
     { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: CircleUser, href: 'https://google.com', label: 'Google' }
+    { icon: Twitter, href: 'https://x.com/imrohitsaluja', label: 'X (Twitter)' },
+    { icon: CircleUser, href: 'https://scholar.google.com/citations?user=JjI4prgAAAAJ&hl=en', label: 'Google Scholar' }
   ];
 
   return (
