@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { Mail, Github, Twitter } from 'lucide-react';
+import { Mail, Github, X } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
     { icon: Mail, href: 'mailto:salujarohit@outlook.com', label: 'Email' },
     { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Twitter, href: 'https://x.com/imrohitsaluja', label: 'X (Twitter)' },
+    { icon: X, href: 'https://x.com/imrohitsaluja', label: 'X (Twitter)' },
     {
       label: 'Google Scholar',
       href: 'https://scholar.google.com/citations?user=JjI4prgAAAAJ&hl=en',
