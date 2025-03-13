@@ -3,6 +3,13 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
+// Define an interface for the navigation links
+interface NavLink {
+  name: string;
+  href: string;
+  external?: boolean;
+}
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +29,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { name: 'Posts', href: '#posts' },
     { name: 'Archive', href: '#archive' },
     { name: 'Search', href: '#search' },
