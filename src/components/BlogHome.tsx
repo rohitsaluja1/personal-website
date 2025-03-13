@@ -107,7 +107,8 @@ const BlogHome = () => {
     },
     {
       id: 2,
-      title: 'Towards a Rigorous Evaluation of Explainability for Multivariate Time Series'
+      title: 'Towards a Rigorous Evaluation of Explainability for Multivariate Time Series',
+      link: 'https://arxiv.org/abs/2104.04075'
     },
     {
       id: 3,
