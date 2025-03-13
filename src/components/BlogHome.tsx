@@ -9,6 +9,7 @@ const BlogHome = () => {
       id: 1,
       title: 'Head of AI',
       company: 'RightHub',
+      companyUrl: 'https://www.righthub.com',
       location: 'Stockholm, Sweden',
       description: 'Helping build the future of Intellectual Property with AI.',
     },
@@ -16,6 +17,7 @@ const BlogHome = () => {
       id: 2,
       title: 'AI Engineer',
       company: 'Silo AI',
+      companyUrl: 'https://www.silo.ai',
       location: 'Helsinki, Finland',
       description: 'Silo AI is Europe\'s largest private AI lab. I led projects in Generative AI.',
     },
@@ -23,6 +25,7 @@ const BlogHome = () => {
       id: 3,
       title: 'Founding AI Engineer & Research Lead',
       company: 'Flowrite',
+      companyUrl: 'https://www.flowrite.com',
       location: 'Helsinki, Finland',
       description: 'Joined as Engineer/Employee #1. Worked extensively with all things related to large language models like GPT-3, from leveraging their generation capabilities to build conversational AI agents to creating custom metrics to fight against their stochasticity. Also thoroughly explored the new paradigm of prompt engineering.',
     },
@@ -30,6 +33,7 @@ const BlogHome = () => {
       id: 4,
       title: 'AI Researcher',
       company: 'Aalto University',
+      companyUrl: 'https://www.aalto.fi',
       location: 'Espoo, Finland',
       description: 'Wrote the python implementation for the the library of the model agnostic explainable AI (XAI) algorithm called Contextual Importance and Utility (CIU) under the supervision of Dr. Kary Främling.',
     },
@@ -37,6 +41,7 @@ const BlogHome = () => {
       id: 5,
       title: 'Machine Learning Researcher',
       company: 'Aalto University',
+      companyUrl: 'https://www.aalto.fi',
       location: 'Espoo, Finland',
       description: 'Explainable AI (XAI) for medical medical images derived from the wireless capsule endoscopy (WCE) procedure. The objective of the project was to build a decision making support',
     },
@@ -44,6 +49,7 @@ const BlogHome = () => {
       id: 6,
       title: 'Co-founder',
       company: 'FOODL',
+      companyUrl: 'https://www.foodl.org',
       location: 'Espoo, Finland',
       description: 'Build the largest food-sharing platform at Aalto University in Finland. The platform was open-sourced and is now run by community voluteers. I\'ve moved to a more passive role.',
     },
@@ -51,6 +57,7 @@ const BlogHome = () => {
       id: 7,
       title: 'Data Scientist – Thesis Worker',
       company: 'Futurice',
+      companyUrl: 'https://www.futurice.com',
       location: 'Helsinki, Finland',
       description: 'Time series forecasting and explainable AI (XAI) for mutivariate time series forecating model to extract actionable insigts for sales strategy.',
     },
@@ -58,6 +65,7 @@ const BlogHome = () => {
       id: 8,
       title: 'ML Engineer - Internship',
       company: 'Aalto University',
+      companyUrl: 'https://www.aalto.fi',
       location: 'Helsinki, Finland',
       description: 'Built an IT support ticket classifer POC for IT services department to help expedite the customer support service process by roughly 50%.',
     },
@@ -65,6 +73,7 @@ const BlogHome = () => {
       id: 9,
       title: 'Co-founder and ML Developer',
       company: 'NeuroGuard',
+      companyUrl: '#',
       location: 'Berkeley, California',
       description: 'An attempt at personalized diagnostics for brain tumors patients.',
     },
@@ -72,6 +81,7 @@ const BlogHome = () => {
       id: 10,
       title: 'Co-founder and CEO',
       company: 'QB Middle East',
+      companyUrl: '#',
       location: '',
       description: 'Built a queue-busting platform to help bring down waiting time for users from hours to few mins at most places.',
     },
@@ -142,7 +152,18 @@ const BlogHome = () => {
                 <div key={job.id} className="border-l-2 border-yellow-400 pl-4 py-1 animate-on-scroll opacity-0 animate-fade-up">
                   <h3 className="text-xl font-bold">{job.title}</h3>
                   <div className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground mb-2">
-                    <span className="font-medium">{job.company}</span>
+                    {job.companyUrl && job.companyUrl !== '#' ? (
+                      <a 
+                        href={job.companyUrl} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium hover:text-yellow-400 transition-colors"
+                      >
+                        {job.company}
+                      </a>
+                    ) : (
+                      <span className="font-medium">{job.company}</span>
+                    )}
                     {job.location && (
                       <>
                         <span className="w-1 h-1 rounded-full bg-muted-foreground inline-block"></span>
