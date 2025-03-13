@@ -14,12 +14,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#1a1a1a] text-foreground py-4">
-      <div className="container flex justify-center items-center max-w-7xl mx-auto px-6 md:px-12">
-        <p className="text-center text-lg">
-          "Any sufficiently advanced technology is indistinguishable from Magic"
-        </p>
-        
-        <div className="flex items-center gap-6 ml-auto">
+      <div className="container flex justify-end items-center max-w-7xl mx-auto px-6 md:px-12">
+        <div className="flex items-center gap-6">
           {socialLinks.map(({ icon: Icon, href, label }) => (
             <a 
               key={label}
