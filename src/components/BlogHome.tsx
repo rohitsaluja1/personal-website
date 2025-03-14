@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Waves, Briefcase, GraduationCap, FileText } from 'lucide-react';
 
@@ -16,10 +15,11 @@ const BlogHome = () => {
     {
       id: 2,
       title: 'AI Engineer',
-      company: 'AMD Silo AI (now part of AMD)',
+      company: 'AMD Silo AI',
       companyUrl: 'https://www.silo.ai',
       location: 'Helsinki, Finland',
       description: 'Silo AI is Europe\'s largest private AI lab. I led projects in Generative AI.',
+      nowPart: 'now part of AMD'
     },
     {
       id: 3,
@@ -166,6 +166,9 @@ const BlogHome = () => {
                       </a>
                     ) : (
                       <span className="text-base font-medium">{job.company}</span>
+                    )}
+                    {job.nowPart && (
+                      <span className="text-base italic text-yellow-400/90">({job.nowPart})</span>
                     )}
                     {job.location && (
                       <>
