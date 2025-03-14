@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTheme } from '@/contexts/ThemeContext';
+import { Toggle } from '@/components/ui/toggle';
 
 // Define an interface for the navigation links
 interface NavLink {
@@ -13,6 +15,7 @@ interface NavLink {
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
   
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   
@@ -44,8 +47,15 @@ const Navbar = () => {
       <div className="px-6 md:px-12 lg:px-24 flex items-center justify-between">
         <a href="#home" className="text-xl font-semibold tracking-tight flex items-center gap-2">
           Rohit Saluja
-          <Moon size={18} className="hidden dark:inline-block" />
-          <Sun size={18} className="inline-block dark:hidden" />
+          <Toggle 
+            onClick={toggleTheme} 
+            className="ml-2 p-0 h-auto data-[state=on]:bg-transparent" 
+            size="sm"
+            pressed={theme === 'light'}
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <Moon size={18} className="text-yellow-400" /> : <Sun size={18} className="text-yellow-400" />}
+          </Toggle>
         </a>
         
         {/* Desktop Navigation */}

@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -6,6 +7,7 @@
 
 @layer base {
   :root {
+    /* Dark mode (default) */
     --background: 0 0% 7%;
     --foreground: 0 0% 96%;
 
@@ -37,6 +39,37 @@
     --radius: 0.5rem;
   }
 
+  /* Light mode variables */
+  :root .light, :root:not(.dark) {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+
+    --primary: 0 0% 7%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 82%;
+    --input: 0 0% 82%;
+    --ring: 0 0% 7%;
+  }
+
   * {
     @apply border-border;
   }
@@ -50,6 +83,11 @@
     @apply bg-background text-foreground;
     font-feature-settings: "salt", "ss01", "cv01", "cv03";
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* Light mode specific styles */
+  .light .blog-post {
+    @apply shadow-sm;
   }
 }
 

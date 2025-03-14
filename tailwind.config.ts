@@ -20,38 +20,65 @@ export default {
 		},
 		extend: {
 			colors: {
-				border: 'hsl(var(--border))',
-				input: 'hsl(var(--input))',
-				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
+				border: {
+					DEFAULT: 'hsl(var(--border))',
+					light: 'hsl(var(--border-light))',
+				},
+				input: {
+					DEFAULT: 'hsl(var(--input))',
+					light: 'hsl(var(--input-light))',
+				},
+				ring: {
+					DEFAULT: 'hsl(var(--ring))',
+					light: 'hsl(var(--ring-light))',
+				},
+				background: {
+					DEFAULT: 'hsl(var(--background))',
+					light: 'hsl(var(--background-light))',
+				},
+				foreground: {
+					DEFAULT: 'hsl(var(--foreground))',
+					light: 'hsl(var(--foreground-light))',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					light: 'hsl(var(--primary-light))',
+					'foreground-light': 'hsl(var(--primary-foreground-light))',
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					foreground: 'hsl(var(--secondary-foreground))',
+					light: 'hsl(var(--secondary-light))',
+					'foreground-light': 'hsl(var(--secondary-foreground-light))',
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
+					foreground: 'hsl(var(--destructive-foreground))',
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
+					foreground: 'hsl(var(--muted-foreground))',
+					light: 'hsl(var(--muted-light))',
+					'foreground-light': 'hsl(var(--muted-foreground-light))',
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					foreground: 'hsl(var(--accent-foreground))',
+					light: 'hsl(var(--accent-light))',
+					'foreground-light': 'hsl(var(--accent-foreground-light))',
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
+					foreground: 'hsl(var(--popover-foreground))',
+					light: 'hsl(var(--popover-light))',
+					'foreground-light': 'hsl(var(--popover-foreground-light))',
 				},
 				card: {
 					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
+					foreground: 'hsl(var(--card-foreground))',
+					light: 'hsl(var(--card-light))',
+					'foreground-light': 'hsl(var(--card-foreground-light))',
 				},
 				// Blog specific colors
 				blog: {
@@ -60,6 +87,13 @@ export default {
 					hover: '#2a2a2a',
 					text: '#f5f5f5',
 					muted: '#888888',
+					light: {
+						background: '#FFFFFF',
+						card: '#F1F1F1',
+						hover: '#E5E5E5',
+						text: '#111111',
+						muted: '#777777',
+					},
 				},
 			},
 			borderRadius: {
