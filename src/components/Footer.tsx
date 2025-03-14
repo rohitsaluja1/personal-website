@@ -20,8 +20,8 @@ const Footer = () => {
   return (
     <footer className={`${theme === 'light' ? 'bg-[#f1f1f1]' : 'bg-[#1a1a1a]'} py-6`}>
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
-        <div className="border-b border-gray-700/30 pb-4 mb-4">
-          <p className={`text-sm md:text-base ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'} italic text-center font-medium`}>
+        <div className="border-b border-gray-700/10 pb-3 mb-4">
+          <p className={`text-xs ${theme === 'light' ? 'text-gray-500' : 'text-gray-600'} italic text-center`}>
             "Any sufficiently advanced technology is indistinguishable from Magic"
           </p>
         </div>
