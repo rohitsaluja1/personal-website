@@ -11,7 +11,7 @@ const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
   
   // Special case for the AI Wrapper article
-  if (id === 'ai-wrapper') {
+  if (id === 'ai-wrapper' || id === '4') {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <Navbar />
@@ -82,6 +82,14 @@ const BlogPost = () => {
             <p>Sundar Pichai (CEO Google) advised that instead of using a thin or shallow wrapper, companies should use thick wrappers that add real value or solve real-world problems on a podcast. Earlier, Sam Altman (CEO OpenAI) said in a podcast, that his company will steamroll any startup or product that uses GPT-4. He has also repeatedly urged startups to build solutions inherently adaptable to rapidly evolving GenAI. Founders should think beyond current AI capabilities to focus on solutions that address future generalizability, according to Altman.</p>
             
             <p>Altman's claim is not entirely unfounded. Perplexity AI already faces a stiff competition from OpenAI since September 2023, when ChatGPT was upgraded with an ability to browse the web. Perplexity then upgraded to its proprietary LLM in its free version just after a month, to eliminate the dependency on a direct competitor. OpenAI has decided to go all in with SearchGPT prototype in 2024.</p>
+            
+            <div className="my-8">
+              <img 
+                src="/lovable-uploads/69405029-465d-444c-8751-9b1d91280178.png" 
+                alt="Foundation AI models vs AI Wrapper" 
+                className="mx-auto rounded-lg shadow-md max-w-full"
+              />
+            </div>
             
             <p>While the threat of shutdown may turn out to be true for some of the startups, it is still a speculation rather than a prophecy set in stone at this point.</p>
             
