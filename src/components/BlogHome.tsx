@@ -169,7 +169,7 @@ const BlogHome = () => {
                       <span className="text-base font-medium">{job.company}</span>
                     )}
                     {job.nowPart && (
-                      <span className="text-base italic text-yellow-400/90">({job.nowPart})</span>
+                      <span className="text-base italic text-yellow-500">({job.nowPart})</span>
                     )}
                     {job.location && (
                       <>
