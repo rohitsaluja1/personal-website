@@ -23,11 +23,12 @@ const Footer = () => {
         <div className="flex justify-center mb-8">
           <div 
             className={`
+              quote-box
               ${theme === 'light' 
-                ? 'bg-gray-100/80 shadow-sm border border-gray-200/50' 
-                : 'bg-[#252525]/80 border border-gray-800/50 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.3)]'
+                ? 'bg-gray-100/90 shadow-sm border border-gray-200/50' 
+                : 'bg-[#252525]/90 border border-gray-800/50 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.3)]'
               } 
-              px-8 py-6 rounded-lg max-w-xl text-center backdrop-blur-sm transition-all duration-300
+              px-8 py-6 rounded-lg max-w-xl text-center
             `}
           >
             <p className={`text-base md:text-lg ${theme === 'light' ? 'text-gray-600' : 'text-gray-300'} italic`}>

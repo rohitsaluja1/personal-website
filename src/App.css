@@ -44,9 +44,12 @@ body {
 /* Quote box transitions */
 .quote-box {
   transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .quote-box:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px -6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.25);
 }
