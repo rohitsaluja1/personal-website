@@ -42,6 +42,7 @@ const Navbar = () => {
   const handleThemeToggle = (e: React.MouseEvent) => {
     // Prevent default to avoid any navigation
     e.preventDefault();
+    e.stopPropagation();
     toggleTheme();
   };
 
