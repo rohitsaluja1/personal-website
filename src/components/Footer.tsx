@@ -20,27 +20,25 @@ const Footer = () => {
   return (
     <footer className={`${theme === 'light' ? 'bg-[#f1f1f1]' : 'bg-[#1a1a1a]'} py-6`}>
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
-        <div className="border-b border-gray-700/10 pb-3 mb-4">
-          <p className={`text-xs ${theme === 'light' ? 'text-gray-500' : 'text-gray-600'} italic text-center`}>
+        <div className="flex justify-center mb-6">
+          <p className={`text-sm ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'} italic`}>
             "Any sufficiently advanced technology is indistinguishable from Magic"
           </p>
         </div>
-        <div className="flex justify-between items-center">
-          <span className="text-xs text-gray-500">© 2024 Rohit Saluja</span>
-          <div className="flex items-center">
-            {socialLinks.map(({ icon: Icon, href, label }) => (
-              <a 
-                key={label}
-                href={href} 
-                target={href.startsWith('mailto') ? undefined : '_blank'}
-                rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-                aria-label={label}
-                className={`${theme === 'light' ? 'text-gray-700 hover:text-gray-900' : 'text-foreground/80 hover:text-foreground'} transition-colors ml-6`}
-              >
-                {Icon && <Icon size={20} />}
-              </a>
-            ))}
-          </div>
+        
+        <div className="flex justify-end items-center">
+          {socialLinks.map(({ icon: Icon, href, label }) => (
+            <a 
+              key={label}
+              href={href} 
+              target={href.startsWith('mailto') ? undefined : '_blank'}
+              rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+              aria-label={label}
+              className={`${theme === 'light' ? 'text-gray-700 hover:text-gray-900' : 'text-foreground/80 hover:text-foreground'} transition-colors ml-6`}
+            >
+              {Icon && <Icon size={20} />}
+            </a>
+          ))}
         </div>
       </div>
     </footer>
