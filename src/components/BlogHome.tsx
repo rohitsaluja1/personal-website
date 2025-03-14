@@ -157,7 +157,7 @@ const BlogHome = () => {
                         href={job.companyUrl} 
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-medium hover:text-yellow-400 transition-colors"
+                        className="font-medium hover:text-yellow-400 transition-colors underline"
                       >
                         {job.company}
                       </a>
@@ -204,7 +204,12 @@ const BlogHome = () => {
               {publications.map(pub => (
                 <li key={pub.id} className="text-muted-foreground animate-on-scroll opacity-0 animate-fade-up">
                   {pub.link ? (
-                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-yellow-400 transition-colors">
+                    <a 
+                      href={pub.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:underline hover:text-yellow-400 transition-colors"
+                    >
                       {pub.title}
                     </a>
                   ) : (
@@ -214,8 +219,6 @@ const BlogHome = () => {
               ))}
             </ul>
           </div>
-          
-          {/* Removed the duplicate social links section that was here */}
         </div>
       </section>
     </div>
