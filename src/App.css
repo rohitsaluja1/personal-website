@@ -40,3 +40,13 @@ body {
   color: #888888;
   font-size: 0.875rem;
 }
+
+/* Quote box transitions */
+.quote-box {
+  transition: all 0.3s ease;
+}
+
+.quote-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px -6px rgba(0, 0, 0, 0.2);
+}
