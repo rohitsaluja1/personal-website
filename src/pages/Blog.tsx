@@ -3,36 +3,9 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
+import { blogPosts } from '@/data/blogPosts';
 
 const Blog = () => {
-  // Sample blog posts data
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Explainable AI: The Next Frontier",
-      excerpt: "Exploring how we can make AI systems more transparent and understandable to gain user trust.",
-      date: "May 15, 2023",
-      readingTime: "5 min",
-      author: "Rohit Saluja"
-    },
-    {
-      id: 2,
-      title: "Large Language Models: Opportunities and Challenges",
-      excerpt: "An in-depth look at how LLMs are transforming industries and the ethical considerations we must address.",
-      date: "April 2, 2023",
-      readingTime: "8 min",
-      author: "Rohit Saluja"
-    },
-    {
-      id: 3,
-      title: "The Future of Intellectual Property in the AI Era",
-      excerpt: "How AI is reshaping our understanding of intellectual property and what it means for creators and businesses.",
-      date: "March 10, 2023",
-      readingTime: "6 min",
-      author: "Rohit Saluja"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
@@ -43,6 +16,7 @@ const Blog = () => {
             {blogPosts.map(post => (
               <BlogCard
                 key={post.id}
+                id={post.id}
                 title={post.title}
                 excerpt={post.excerpt}
                 date={post.date}
