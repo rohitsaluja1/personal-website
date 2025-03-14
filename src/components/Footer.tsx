@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { Mail, Github, X } from 'lucide-react';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const Footer = () => {
+  const { theme } = useTheme();
+  
   const socialLinks = [
     { icon: Mail, href: 'mailto:salujarohit@outlook.com', label: 'Email' },
     { icon: Github, href: 'https://github.com', label: 'GitHub' },
@@ -31,7 +34,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#1a1a1a] text-foreground py-4">
+    <footer className={`${theme === 'light' ? 'bg-[#f1f1f1]' : 'bg-[#1a1a1a]'} py-4`}>
       <div className="container flex justify-end items-center max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center gap-6">
           {socialLinks.map(({ icon: Icon, href, label, customIcon }) => (
@@ -41,7 +44,7 @@ const Footer = () => {
               target={href.startsWith('mailto') ? undefined : '_blank'}
               rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
               aria-label={label}
-              className="text-foreground/80 hover:text-foreground transition-colors"
+              className={`${theme === 'light' ? 'text-gray-700 hover:text-gray-900' : 'text-foreground/80 hover:text-foreground'} transition-colors`}
             >
               {customIcon || (Icon && <Icon size={20} />)}
             </a>
