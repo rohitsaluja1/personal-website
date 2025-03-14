@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Waves, Briefcase, GraduationCap, FileText } from 'lucide-react';
 
@@ -16,7 +15,7 @@ const BlogHome = () => {
     {
       id: 2,
       title: 'AI Engineer',
-      company: 'AMD Silo AI',
+      company: 'Silo AI (now part of AMD)',
       companyUrl: 'https://www.silo.ai',
       location: 'Helsinki, Finland',
       description: 'Silo AI is Europe\'s largest private AI lab. I led projects in Generative AI.',
@@ -24,7 +23,7 @@ const BlogHome = () => {
     {
       id: 3,
       title: 'Founding AI Engineer & Research Lead',
-      company: 'Flowrite',
+      company: 'Flowrite (now part of MailMaestro)',
       companyUrl: 'https://www.flowrite.com',
       location: 'Helsinki, Finland',
       description: 'Joined as Engineer/Employee #1. Worked extensively with all things related to large language models like GPT-3, from leveraging their generation capabilities to build conversational AI agents to creating custom metrics to fight against their stochasticity. Also thoroughly explored the new paradigm of prompt engineering.',
