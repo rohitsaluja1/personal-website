@@ -48,7 +48,7 @@ const BlogHome = () => {
       id: 6,
       title: 'Co-founder',
       company: 'FOODL',
-      companyUrl: 'https://www.foodl.org',
+      companyUrl: '#',
       location: 'Espoo, Finland',
       description: 'Build the largest food-sharing platform at Aalto University in Finland. The platform was open-sourced and is now run by community voluteers. I\'ve moved to a more passive role.',
     },
