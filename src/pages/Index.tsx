@@ -40,7 +40,7 @@ const Index = () => {
     {
       id: 2,
       title: 'AI Engineer',
-      company: 'Silo AI (now part of AMD)',
+      company: 'AMD Silo AI',
       companyUrl: 'https://www.silo.ai',
       location: 'Helsinki, Finland',
       description: 'Silo AI is Europe\'s largest private AI lab. I led projects in Generative AI.',
