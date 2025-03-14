@@ -35,7 +35,10 @@ const Footer = () => {
 
   return (
     <footer className={`${theme === 'light' ? 'bg-[#f1f1f1]' : 'bg-[#1a1a1a]'} py-4`}>
-      <div className="container flex justify-end items-center max-w-7xl mx-auto px-6 md:px-12">
+      <div className="container max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center">
+        <p className={`text-xs ${theme === 'light' ? 'text-gray-500' : 'text-gray-400'} italic mb-4 md:mb-0`}>
+          Any sufficiently advanced technology is indistinguishable from Magic
+        </p>
         <div className="flex items-center gap-6">
           {socialLinks.map(({ icon: Icon, href, label, customIcon }) => (
             <a 
