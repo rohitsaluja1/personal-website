@@ -4,10 +4,13 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import { blogPosts } from '@/data/blogPosts';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const Blog = () => {
+  const { theme } = useTheme();
+  
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className={`min-h-screen bg-background text-foreground ${theme === 'light' ? 'light' : 'dark'}`}>
       <Navbar />
       <main className="pt-24 px-6 md:px-12 lg:px-24 max-w-6xl mx-auto">
         <section className="py-12">

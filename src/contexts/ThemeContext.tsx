@@ -26,8 +26,9 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   }, []);
 
-  // Apply theme changes
+  // Apply theme changes without causing a navigation
   useEffect(() => {
+    // Just toggle the class and update localStorage without any navigation side effects
     document.documentElement.classList.toggle('dark', theme === 'dark');
     localStorage.setItem('theme', theme);
   }, [theme]);

@@ -4,7 +4,7 @@ import { Menu, X, Moon, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTheme } from '@/contexts/ThemeContext';
 import { Toggle } from '@/components/ui/toggle';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 // Define an interface for the navigation links
 interface NavLink {
@@ -17,6 +17,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const location = useLocation();
   
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   
@@ -38,6 +39,12 @@ const Navbar = () => {
     { name: 'Blog', href: '/blog' },
   ];
 
+  const handleThemeToggle = (e: React.MouseEvent) => {
+    // Prevent default to avoid any navigation
+    e.preventDefault();
+    toggleTheme();
+  };
+
   return (
     <header className={cn(
       'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
@@ -47,7 +54,7 @@ const Navbar = () => {
         <Link to="/" className="text-xl font-semibold tracking-tight flex items-center gap-2">
           Rohit Saluja
           <Toggle 
-            onClick={toggleTheme} 
+            onClick={handleThemeToggle} 
             className="ml-2 p-0 h-auto data-[state=on]:bg-transparent" 
             size="sm"
             pressed={theme === 'light'}
@@ -74,7 +81,10 @@ const Navbar = () => {
               <Link 
                 key={link.name} 
                 to={link.href}
-                className="nav-item text-sm font-medium"
+                className={cn(
+                  "nav-item text-sm font-medium",
+                  location.pathname === link.href && "font-bold"
+                )}
               >
                 {link.name}
               </Link>
@@ -112,7 +122,10 @@ const Navbar = () => {
                 <Link 
                   key={link.name} 
                   to={link.href}
-                  className="text-lg py-2"
+                  className={cn(
+                    "text-lg py-2",
+                    location.pathname === link.href && "font-bold"
+                  )}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
