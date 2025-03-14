@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Waves, Briefcase, GraduationCap, FileText } from 'lucide-react';
 
@@ -181,14 +182,20 @@ const BlogHome = () => {
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <GraduationCap size={24} className="text-yellow-400" /> Education
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-6">
               {education.map(edu => (
                 <div key={edu.id} className="animate-on-scroll opacity-0 animate-fade-up">
-                  <div className="flex items-center gap-3 mb-1">
-                    <span className="text-sm font-mono bg-secondary/50 px-2 py-1 rounded">{edu.year}</span>
-                    <h3 className="text-lg font-bold">{edu.institution}</h3>
+                  <div className="flex flex-wrap md:flex-nowrap items-start gap-3 mb-1">
+                    <span className="text-sm font-mono bg-secondary/50 px-2 py-1 rounded min-w-[90px] text-center">
+                      {edu.year}
+                    </span>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold">{edu.institution}</h3>
+                      <p className="text-base font-medium text-yellow-400 mt-1">
+                        {edu.location}
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-sm text-muted-foreground ml-14">{edu.location}</p>
                 </div>
               ))}
             </div>
