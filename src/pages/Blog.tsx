@@ -12,7 +12,7 @@ const Blog = () => {
       <main className="pt-24 px-6 md:px-12 lg:px-24 max-w-6xl mx-auto">
         <section className="py-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-8">Blog</h1>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6">
             {blogPosts.map(post => (
               <BlogCard
                 key={post.id}
