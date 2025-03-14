@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -6,7 +5,6 @@ import { Waves, Briefcase, GraduationCap, FileText } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
-    // Add visible class to elements when they enter the viewport
     const addVisible = () => {
       const elements = document.querySelectorAll('.animate-on-scroll');
       elements.forEach(element => {
@@ -21,10 +19,8 @@ const Index = () => {
       });
     };
     
-    // Initial check
     addVisible();
     
-    // Add scroll event listener
     window.addEventListener('scroll', addVisible);
     
     return () => {
@@ -32,7 +28,6 @@ const Index = () => {
     };
   }, []);
 
-  // Work experience data
   const workExperience = [
     {
       id: 1,
@@ -116,29 +111,27 @@ const Index = () => {
     },
   ];
 
-  // Education data
   const education = [
     {
       id: 1,
-      year: '2018-2020',
       institution: 'KTH Royal Institute of Technology',
+      url: 'https://www.kth.se',
       location: 'Sweden'
     },
     {
       id: 2,
-      year: '2018-2020',
       institution: 'Aalto University',
+      url: 'https://www.aalto.fi',
       location: 'Finland'
     },
     {
       id: 3,
-      year: '2013-2017',
       institution: 'Birla Institute of Technology and Science (BITS), Pilani',
+      url: 'https://www.bits-pilani.ac.in',
       location: 'India'
     },
   ];
 
-  // Publications data
   const publications = [
     {
       id: 1,
@@ -162,7 +155,6 @@ const Index = () => {
               <Waves className="text-yellow-400" size={32} /> Rohit Saluja
             </h1>
             
-            {/* About section */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold mb-4">About</h2>
               <p className="text-lg text-muted-foreground">
@@ -173,7 +165,6 @@ const Index = () => {
               </p>
             </div>
             
-            {/* Work Experience section */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <Briefcase size={24} className="text-yellow-400" /> Work Experience
@@ -208,7 +199,6 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Education section */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <GraduationCap size={24} className="text-yellow-400" /> Education
@@ -217,11 +207,17 @@ const Index = () => {
                 {education.map(edu => (
                   <div key={edu.id} className="animate-on-scroll opacity-0 animate-fade-up">
                     <div className="flex flex-wrap md:flex-nowrap items-start gap-3 mb-1">
-                      <span className="text-sm font-mono bg-secondary/50 px-2 py-1 rounded min-w-[90px] text-center">
-                        {edu.year}
-                      </span>
                       <div className="flex-1">
-                        <h3 className="text-lg font-bold">{edu.institution}</h3>
+                        <h3 className="text-lg font-bold">
+                          <a 
+                            href={edu.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="hover:text-yellow-400 transition-colors"
+                          >
+                            {edu.institution}
+                          </a>
+                        </h3>
                         <p className="text-base font-medium text-yellow-400 mt-1">
                           {edu.location}
                         </p>
@@ -232,7 +228,6 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Publications section */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <FileText size={24} className="text-yellow-400" /> Publications

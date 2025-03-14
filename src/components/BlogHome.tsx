@@ -91,20 +91,20 @@ const BlogHome = () => {
   const education = [
     {
       id: 1,
-      year: '2018-2020',
       institution: 'KTH Royal Institute of Technology',
+      url: 'https://www.kth.se',
       location: 'Sweden'
     },
     {
       id: 2,
-      year: '2018-2020',
       institution: 'Aalto University',
+      url: 'https://www.aalto.fi',
       location: 'Finland'
     },
     {
       id: 3,
-      year: '2013-2017',
       institution: 'Birla Institute of Technology and Science (BITS), Pilani',
+      url: 'https://www.bits-pilani.ac.in',
       location: 'India'
     },
   ];
@@ -186,11 +186,17 @@ const BlogHome = () => {
               {education.map(edu => (
                 <div key={edu.id} className="animate-on-scroll opacity-0 animate-fade-up">
                   <div className="flex flex-wrap md:flex-nowrap items-start gap-3 mb-1">
-                    <span className="text-sm font-mono bg-secondary/50 px-2 py-1 rounded min-w-[90px] text-center">
-                      {edu.year}
-                    </span>
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold">{edu.institution}</h3>
+                      <h3 className="text-lg font-bold">
+                        <a 
+                          href={edu.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="hover:text-yellow-400 transition-colors"
+                        >
+                          {edu.institution}
+                        </a>
+                      </h3>
                       <p className="text-base font-medium text-yellow-400 mt-1">
                         {edu.location}
                       </p>
