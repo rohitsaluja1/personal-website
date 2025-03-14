@@ -151,23 +151,23 @@ const BlogHome = () => {
               {workExperience.map(job => (
                 <div key={job.id} className="border-l-2 border-yellow-400 pl-4 py-1 animate-on-scroll opacity-0 animate-fade-up">
                   <h3 className="text-xl font-bold">{job.title}</h3>
-                  <div className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground mb-2">
+                  <div className="flex flex-wrap items-center gap-x-2 text-sm mb-2">
                     {job.companyUrl && job.companyUrl !== '#' ? (
                       <a 
                         href={job.companyUrl} 
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-medium hover:text-yellow-400 transition-colors underline"
+                        className="text-base font-medium hover:text-yellow-400 transition-colors underline"
                       >
                         {job.company}
                       </a>
                     ) : (
-                      <span className="font-medium">{job.company}</span>
+                      <span className="text-base font-medium">{job.company}</span>
                     )}
                     {job.location && (
                       <>
                         <span className="w-1 h-1 rounded-full bg-muted-foreground inline-block"></span>
-                        <span>{job.location}</span>
+                        <span className="text-base">{job.location}</span>
                       </>
                     )}
                   </div>
