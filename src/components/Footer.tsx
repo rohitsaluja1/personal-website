@@ -18,15 +18,15 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#111111] py-6">
+    <footer className={`${theme === 'light' ? 'bg-[#f1f1f1]' : 'bg-[#1a1a1a]'} py-6`}>
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex justify-center">
-          <p className="text-gray-400 italic text-sm">
+        <div className="flex justify-center mb-6">
+          <p className={`text-sm ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'} italic`}>
             "Any sufficiently advanced technology is indistinguishable from Magic"
           </p>
         </div>
         
-        <div className="hidden">
+        <div className="flex justify-end items-center">
           {socialLinks.map(({ icon: Icon, href, label }) => (
             <a 
               key={label}
@@ -34,7 +34,7 @@ const Footer = () => {
               target={href.startsWith('mailto') ? undefined : '_blank'}
               rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
               aria-label={label}
-              className="transition-colors ml-6"
+              className={`${theme === 'light' ? 'text-gray-700 hover:text-gray-900' : 'text-foreground/80 hover:text-foreground'} transition-colors ml-6`}
             >
               {Icon && <Icon size={20} />}
             </a>
