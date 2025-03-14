@@ -25,19 +25,22 @@ const Footer = () => {
             "Any sufficiently advanced technology is indistinguishable from Magic"
           </p>
         </div>
-        <div className="flex justify-end items-center">
-          {socialLinks.map(({ icon: Icon, href, label }) => (
-            <a 
-              key={label}
-              href={href} 
-              target={href.startsWith('mailto') ? undefined : '_blank'}
-              rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-              aria-label={label}
-              className={`${theme === 'light' ? 'text-gray-700 hover:text-gray-900' : 'text-foreground/80 hover:text-foreground'} transition-colors ml-6`}
-            >
-              {Icon && <Icon size={20} />}
-            </a>
-          ))}
+        <div className="flex justify-between items-center">
+          <span className="text-xs text-gray-500">© 2024 Rohit Saluja</span>
+          <div className="flex items-center">
+            {socialLinks.map(({ icon: Icon, href, label }) => (
+              <a 
+                key={label}
+                href={href} 
+                target={href.startsWith('mailto') ? undefined : '_blank'}
+                rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                aria-label={label}
+                className={`${theme === 'light' ? 'text-gray-700 hover:text-gray-900' : 'text-foreground/80 hover:text-foreground'} transition-colors ml-6`}
+              >
+                {Icon && <Icon size={20} />}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
