@@ -34,12 +34,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer className={`${theme === 'light' ? 'bg-[#f1f1f1]' : 'bg-[#1a1a1a]'} py-4`}>
-      <div className="container max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center">
-        <p className={`text-xs ${theme === 'light' ? 'text-gray-500' : 'text-gray-400'} italic mb-4 md:mb-0`}>
-          Any sufficiently advanced technology is indistinguishable from Magic
-        </p>
-        <div className="flex items-center gap-6">
+    <footer className={`${theme === 'light' ? 'bg-[#f1f1f1]' : 'bg-[#1a1a1a]'} py-6`}>
+      <div className="container max-w-7xl mx-auto px-6 md:px-12">
+        <div className="border-b border-gray-700/30 pb-4 mb-4">
+          <p className={`text-sm md:text-base ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'} italic text-center font-medium`}>
+            "Any sufficiently advanced technology is indistinguishable from Magic"
+          </p>
+        </div>
+        <div className="flex justify-end items-center">
           {socialLinks.map(({ icon: Icon, href, label, customIcon }) => (
             <a 
               key={label}
@@ -47,7 +49,7 @@ const Footer = () => {
               target={href.startsWith('mailto') ? undefined : '_blank'}
               rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
               aria-label={label}
-              className={`${theme === 'light' ? 'text-gray-700 hover:text-gray-900' : 'text-foreground/80 hover:text-foreground'} transition-colors`}
+              className={`${theme === 'light' ? 'text-gray-700 hover:text-gray-900' : 'text-foreground/80 hover:text-foreground'} transition-colors ml-6`}
             >
               {customIcon || (Icon && <Icon size={20} />)}
             </a>
