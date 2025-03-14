@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -37,6 +36,7 @@ const Navbar = () => {
   const navLinks: NavLink[] = [
     { name: 'CV', href: '/' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   const handleThemeToggle = (e: React.MouseEvent) => {
