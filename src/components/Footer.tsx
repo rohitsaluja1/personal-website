@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, Github, X, GraduationCap } from 'lucide-react';
+import { Mail, Github, X, GraduationCap, FileText } from 'lucide-react';
 import { useTheme } from '@/contexts/ThemeContext';
 
 const Footer = () => {
@@ -14,6 +14,11 @@ const Footer = () => {
       label: 'Google Scholar',
       href: 'https://scholar.google.com/citations?user=JjI4prgAAAAJ&hl=en',
       icon: GraduationCap
+    },
+    {
+      label: 'Markdown Profile',
+      href: '/profile.md',
+      icon: FileText
     },
   ];
 
@@ -53,6 +58,15 @@ const Footer = () => {
               {Icon && <Icon size={20} />}
             </a>
           ))}
+        </div>
+        
+        <div className="mt-6 text-center">
+          <a 
+            href="/profile.md"
+            className={`text-sm ${theme === 'light' ? 'text-gray-500 hover:text-gray-700' : 'text-gray-400 hover:text-gray-200'} transition-colors`}
+          >
+            View profile in Markdown format
+          </a>
         </div>
       </div>
     </footer>
