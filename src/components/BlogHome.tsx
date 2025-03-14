@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Waves, Briefcase, GraduationCap, FileText } from 'lucide-react';
 
@@ -15,7 +16,7 @@ const BlogHome = () => {
     {
       id: 2,
       title: 'AI Engineer',
-      company: 'AMD Silo AI',
+      company: 'AMD Silo AI (now part of AMD)',
       companyUrl: 'https://www.silo.ai',
       location: 'Helsinki, Finland',
       description: 'Silo AI is Europe\'s largest private AI lab. I led projects in Generative AI.',
