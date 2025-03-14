@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -116,19 +117,22 @@ const Index = () => {
       id: 1,
       institution: 'KTH Royal Institute of Technology',
       url: 'https://www.kth.se',
-      location: 'Sweden'
+      location: 'Sweden',
+      degree: 'Master of Science (M.Sc.)'
     },
     {
       id: 2,
       institution: 'Aalto University',
       url: 'https://www.aalto.fi',
-      location: 'Finland'
+      location: 'Finland',
+      degree: 'Master of Science (M.Sc.)'
     },
     {
       id: 3,
       institution: 'Birla Institute of Technology and Science (BITS), Pilani',
       url: 'https://www.bits-pilani.ac.in',
-      location: 'India'
+      location: 'India',
+      degree: 'Bachelor of Engineering (B.E.)'
     },
   ];
 
@@ -218,6 +222,11 @@ const Index = () => {
                             {edu.institution}
                           </a>
                         </h3>
+                        {edu.degree && (
+                          <p className="text-muted-foreground italic mt-1">
+                            {edu.degree}
+                          </p>
+                        )}
                         <p className="text-base font-medium text-yellow-400 mt-1">
                           {edu.location}
                         </p>
