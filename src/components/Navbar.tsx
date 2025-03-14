@@ -4,6 +4,7 @@ import { Menu, X, Moon, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTheme } from '@/contexts/ThemeContext';
 import { Toggle } from '@/components/ui/toggle';
+import { Link } from 'react-router-dom';
 
 // Define an interface for the navigation links
 interface NavLink {
@@ -33,10 +34,8 @@ const Navbar = () => {
   }, []);
   
   const navLinks: NavLink[] = [
-    { name: 'Experience', href: '#experience' },
-    { name: 'Education', href: '#education' },
-    { name: 'Publications', href: '#publications' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'CV', href: '/' },
+    { name: 'Blog', href: '/blog' },
   ];
 
   return (
@@ -45,7 +44,7 @@ const Navbar = () => {
       isScrolled ? 'py-3 backdrop-blur-lg bg-background/90 shadow-sm border-b border-border/50' : 'py-4 bg-transparent'
     )}>
       <div className="px-6 md:px-12 lg:px-24 flex items-center justify-between">
-        <a href="#home" className="text-xl font-semibold tracking-tight flex items-center gap-2">
+        <Link to="/" className="text-xl font-semibold tracking-tight flex items-center gap-2">
           Rohit Saluja
           <Toggle 
             onClick={toggleTheme} 
@@ -56,20 +55,30 @@ const Navbar = () => {
           >
             {theme === 'dark' ? <Moon size={18} className="text-yellow-400" /> : <Sun size={18} className="text-yellow-400" />}
           </Toggle>
-        </a>
+        </Link>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
           {navLinks.map(link => (
-            <a 
-              key={link.name} 
-              href={link.href}
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noopener noreferrer" : undefined}
-              className="nav-item text-sm font-medium"
-            >
-              {link.name}
-            </a>
+            link.external ? (
+              <a 
+                key={link.name} 
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-item text-sm font-medium"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link 
+                key={link.name} 
+                to={link.href}
+                className="nav-item text-sm font-medium"
+              >
+                {link.name}
+              </Link>
+            )
           ))}
         </nav>
         
@@ -88,16 +97,27 @@ const Navbar = () => {
         <nav className="md:hidden py-4 px-6 bg-background/95 backdrop-blur-lg border-t border-border animate-fade-in">
           <div className="flex flex-col space-y-4">
             {navLinks.map(link => (
-              <a 
-                key={link.name} 
-                href={link.href}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
-                className="text-lg py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
-              </a>
+              link.external ? (
+                <a 
+                  key={link.name} 
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link 
+                  key={link.name} 
+                  to={link.href}
+                  className="text-lg py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
         </nav>
