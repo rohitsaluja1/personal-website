@@ -18,12 +18,17 @@ const Footer = () => {
   ];
 
   return (
-    <footer className={`${theme === 'light' ? 'bg-[#f1f1f1]' : 'bg-[#1a1a1a]'} py-6`}>
+    <footer className={`${theme === 'light' ? 'bg-[#f1f1f1]' : 'bg-[#1a1a1a]'} py-8`}>
       <div className="container max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex justify-center mb-6">
-          <p className={`text-sm ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'} italic`}>
-            "Any sufficiently advanced technology is indistinguishable from Magic"
-          </p>
+        <div className="flex justify-center mb-8">
+          <div className={`${theme === 'light' ? 'bg-gray-100' : 'bg-[#252525]'} px-8 py-6 rounded-lg max-w-xl text-center`}>
+            <p className={`text-base md:text-lg ${theme === 'light' ? 'text-gray-600' : 'text-gray-300'} italic`}>
+              "<span className="font-semibold">Any sufficiently advanced technology</span> is indistinguishable from <span className="font-semibold">Magic</span>"
+              <span className={`block mt-2 text-xs ${theme === 'light' ? 'text-gray-500' : 'text-gray-400'}`}>
+                — Arthur C. Clarke
+              </span>
+            </p>
+          </div>
         </div>
         
         <div className="flex justify-end items-center">
