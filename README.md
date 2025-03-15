@@ -1,69 +1,85 @@
-# Welcome to your Lovable project
+# Personal Website
 
-## Project info
+A modern, responsive personal website built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/cc2e6016-70fe-44b5-bada-10de4db71730
+## Technologies
 
-## How can I edit this code?
+This project is built with modern web technologies:
 
-There are several ways of editing your application.
+- **React** - Frontend library for building user interfaces
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Next-generation frontend tooling
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - High-quality UI components
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/cc2e6016-70fe-44b5-bada-10de4db71730) and start prompting.
+### Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+- Node.js (v18.x or later recommended)
+- npm or yarn package manager
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/rohitsaluja1/personal-website.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd personal-website
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
+# or
+yarn install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
+# or
+yarn dev
 ```
 
-**Edit a file directly in GitHub**
+The development server will start at `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Development
 
-**Use GitHub Codespaces**
+### Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+personal-website/
+├── public/          # Static assets
+├── src/             # Source code
+│   ├── assets/      # Images, fonts, etc.
+│   ├── components/  # Reusable UI components
+│   ├── pages/       # Page components
+│   ├── styles/      # Global styles
+│   └── main.tsx     # Application entry point
+├── index.html       # HTML template
+└── vite.config.ts   # Vite configuration
+```
 
-## What technologies are used for this project?
+### Building for Production
 
-This project is built with .
+```sh
+npm run build
+# or
+yarn build
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+This will generate a `dist` directory with the production build.
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/cc2e6016-70fe-44b5-bada-10de4db71730) and click on Share -> Publish.
+This project is deployed on Vercel. You can also deploy it to:
 
-## I want to use a custom domain - is that possible?
+- **Vercel** - Zero-configuration deployment
+- **Netlify** - Simple drag-and-drop deployment
+- **GitHub Pages** - Free hosting directly from your repository
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
